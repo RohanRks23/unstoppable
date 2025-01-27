@@ -4,12 +4,13 @@
 frappe.ui.form.on("Members", {
     refresh(frm){
         calculate_payments(frm);
+        membership_status(frm);
     },
     membership_plan: function(frm){
         calculate_payments(frm);
     },
     end_date: function(frm){
-        membership_status(frm)
+        membership_status(frm);
     },
     pay_now: function(frm) {
         if (frm.saved = true) {
