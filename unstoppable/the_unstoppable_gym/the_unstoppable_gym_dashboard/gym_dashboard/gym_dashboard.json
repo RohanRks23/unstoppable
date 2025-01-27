@@ -1,0 +1,33 @@
+{
+ "cards": [
+  {
+   "card": "Total active members"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Memberships expiring this month",
+   "width": "Half"
+  },
+  {
+   "chart": "Total Active and Inactive members",
+   "width": "Half"
+  },
+  {
+   "chart": "Weekly attendance summary",
+   "width": "Full"
+  }
+ ],
+ "creation": "2025-01-23 11:30:04.078673",
+ "dashboard_name": "Gym Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-01-23 12:28:50.745464",
+ "modified_by": "Administrator",
+ "module": "The Unstoppable Gym",
+ "name": "Gym Dashboard",
+ "owner": "Administrator"
+}

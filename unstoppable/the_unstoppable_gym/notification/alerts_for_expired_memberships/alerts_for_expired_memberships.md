@@ -1,0 +1,3 @@
+Dear {{ doc.first_name }},
+    I hope this mail finds you well.
+We would like to inform you that your {{ doc.membership_plan }} for {{ doc.duration }} is now {{doc.membership_status}}.

@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-22 15:34:30.191013",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "members",
+  "name1",
+  "from_time",
+  "to_time",
+  "duration"
+ ],
+ "fields": [
+  {
+   "fieldname": "members",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Members",
+   "options": "Members",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "members.full_name",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "label": "Duration",
+   "options": "to-from"
+  },
+  {
+   "fieldname": "from_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "To",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-22 17:09:20.684882",
+ "modified_by": "Administrator",
+ "module": "The Unstoppable Gym",
+ "name": "Attendance Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

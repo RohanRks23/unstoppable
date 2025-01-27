@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{date}",
+ "creation": "2025-01-22 15:26:20.327574",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date_and_time_section",
+  "date",
+  "attendance_section",
+  "members_attended"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_and_time_section",
+   "fieldtype": "Section Break",
+   "label": "Date and time"
+  },
+  {
+   "fieldname": "attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Attendance"
+  },
+  {
+   "fieldname": "members_attended",
+   "fieldtype": "Table",
+   "label": "Members attended",
+   "options": "Attendance Table"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-22 17:48:53.941123",
+ "modified_by": "Administrator",
+ "module": "The Unstoppable Gym",
+ "name": "Attendance",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

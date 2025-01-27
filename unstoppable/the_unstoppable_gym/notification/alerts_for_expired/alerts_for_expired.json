@@ -1,0 +1,33 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "creation": "2025-01-23 15:12:12.995158",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Members",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Dear {{ doc.first_name }},\n    I hope this mail finds you well. We would like to inform you that your {{ doc.membership_plan }} is now {{doc.membership_status}}.",
+ "message_type": "Plain Text",
+ "minutes_offset": 0,
+ "modified": "2025-01-23 15:13:38.747448",
+ "modified_by": "Administrator",
+ "module": "The Unstoppable Gym",
+ "name": "Alerts for expired",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "owner",
+   "receiver_by_role": "Guest"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "sender": "Unstoppable",
+ "sender_email": "rohanksahukar@gmail.com",
+ "subject": "Your {{ doc.membership_plan}} is now {{doc.membership_status}}",
+ "value_changed": "membership_status"
+}

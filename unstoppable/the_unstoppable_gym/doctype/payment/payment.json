@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:account_number",
+ "creation": "2025-01-21 15:45:25.533712",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "account_details_section",
+  "account_number",
+  "account_holder",
+  "column_break_nulu",
+  "member_id",
+  "payment_details_section",
+  "date",
+  "column_break_ezev",
+  "amount",
+  "pay_now",
+  "account_ledger_section",
+  "payment_history",
+  "total_paid"
+ ],
+ "fields": [
+  {
+   "fieldname": "account_details_section",
+   "fieldtype": "Section Break",
+   "label": "Account details"
+  },
+  {
+   "fieldname": "account_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Account number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_nulu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "member_id.full_name",
+   "fieldname": "account_holder",
+   "fieldtype": "Data",
+   "label": "Account holder"
+  },
+  {
+   "fieldname": "payment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Payment details"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_ezev",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "account_ledger_section",
+   "fieldtype": "Section Break",
+   "label": "Account ledger"
+  },
+  {
+   "fieldname": "payment_history",
+   "fieldtype": "Table",
+   "label": "Payment history",
+   "options": "Payments Account Ledger"
+  },
+  {
+   "fieldname": "member_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member ID",
+   "no_copy": 1,
+   "options": "Members"
+  },
+  {
+   "fieldname": "pay_now",
+   "fieldtype": "Button",
+   "label": "Pay now"
+  },
+  {
+   "fieldname": "total_paid",
+   "fieldtype": "Currency",
+   "label": "Total paid"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-24 16:18:27.386025",
+ "modified_by": "Administrator",
+ "module": "The Unstoppable Gym",
+ "name": "Payment",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

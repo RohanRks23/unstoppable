@@ -1,0 +1,28 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2025-01-22 17:59:39.632346",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2025-01-22 18:07:22.893221",
+ "modified_by": "Administrator",
+ "module": "The Unstoppable Gym",
+ "name": "Membership status",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \n    full_name as 'Name',\n    membership_plan as 'Membership plan', \n    membership_status as 'Membership status', \n    payment_status as 'Payment status', \n    start_date as 'Start date', \n    end_date as 'End date', \n    amount_paid as 'Amount paid', \n    outstanding_amount as 'Outstanding Amount'\nFROM tabMembers;",
+ "ref_doctype": "Members",
+ "report_name": "Membership status",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}

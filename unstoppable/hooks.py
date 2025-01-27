@@ -148,6 +148,17 @@ app_license = "mit"
 # 	}
 # }
 
+
+
+
+doc_events = {
+    "Members": {
+        "before_insert": "unstoppable.tasks.on_membership_creation",
+        "on_update": "unstoppable.tasks.on_membership_updates"
+	}
+}
+
+
 # Scheduled Tasks
 # ---------------
 
@@ -168,6 +179,42 @@ app_license = "mit"
 # 		"unstoppable.tasks.monthly"
 # 	],
 # }
+
+
+scheduler_events = {
+	"daily": [
+		"unstoppable.tasks.daily_reminder_task_user",
+        "unstoppable.tasks.daily_reminder_task_owners"
+	],
+	"weekly": [
+		"unstoppable.tasks.weekly_summary_task"
+	],
+}
+
+
+
+
+
+
+# scheduler_events = {
+# 	"monthly": [
+# 		"unstoppable.tasks.membership_status"
+# 	],
+# }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Testing
 # -------

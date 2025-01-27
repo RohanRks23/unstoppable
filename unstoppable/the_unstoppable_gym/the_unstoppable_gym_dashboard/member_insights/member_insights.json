@@ -1,0 +1,25 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "Memberships expiring this month",
+   "width": "Half"
+  },
+  {
+   "chart": "Weekly attendance summary",
+   "width": "Full"
+  }
+ ],
+ "creation": "2025-01-23 11:30:04.078673",
+ "dashboard_name": "Member Insights",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-01-23 11:56:35.934495",
+ "modified_by": "Administrator",
+ "module": "The Unstoppable Gym",
+ "name": "Member Insights",
+ "owner": "Administrator"
+}

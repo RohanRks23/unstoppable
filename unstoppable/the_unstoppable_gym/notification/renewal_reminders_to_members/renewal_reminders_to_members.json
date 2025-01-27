@@ -1,0 +1,35 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2025-01-23 15:21:43.476470",
+ "date_changed": "end_date",
+ "days_in_advance": 10,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Members",
+ "enabled": 1,
+ "event": "Days Before",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Dear {{ doc.first_name }},\n\nI hope this mail finds you well. \nYour {{ doc.membership_plan }} at The Unstoppable Gym is about to expire. Please renew your membership plan before {{ doc.end_date }}.",
+ "message_type": "Plain Text",
+ "minutes_offset": 0,
+ "modified": "2025-01-23 17:44:48.529201",
+ "modified_by": "Administrator",
+ "module": "The Unstoppable Gym",
+ "name": "Renewal reminders to members",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "cc": "Rohan_rks@outlook.com",
+   "receiver_by_document_field": "owner",
+   "receiver_by_role": "Guest"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "sender": "Unstoppable",
+ "sender_email": "rohanksahukar@gmail.com",
+ "subject": "Renewal remainder of your {{ doc.membership_plan}} at The Unstoppable Gym",
+ "value_changed": "membership_status"
+}

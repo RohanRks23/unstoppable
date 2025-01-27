@@ -1,0 +1,4 @@
+Dear {{ doc.first_name }},
+
+I hope this mail finds you well. 
+Your {{ doc.membership_plan }} at The Unstoppable Gym is about to expire. Please renew your membership plan before {{ doc.end_date }}.

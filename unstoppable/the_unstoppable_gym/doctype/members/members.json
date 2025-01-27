@@ -1,0 +1,265 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{full_name}-{##}",
+ "creation": "2025-01-20 17:41:11.484272",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_information_section",
+  "first_name",
+  "last_name",
+  "full_name",
+  "email",
+  "dob",
+  "column_break_wuev",
+  "contact_number",
+  "emergency_contact",
+  "medical_history",
+  "describe_medical_history",
+  "blood_group",
+  "membership_details_section",
+  "membership_plan",
+  "start_date",
+  "membership_duration",
+  "column_break_zjsq",
+  "membership_status",
+  "end_date",
+  "renew_plan",
+  "payments_and_validity_section",
+  "payment_status",
+  "amount_to_pay_till_date",
+  "monthly_fee",
+  "total_fee",
+  "column_break_sall",
+  "account_number",
+  "amount_paid",
+  "outstanding_amount",
+  "pay_now",
+  "membership_renewals_section",
+  "previous_plans"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last name"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Contact number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "DOB",
+   "reqd": 1
+  },
+  {
+   "fieldname": "emergency_contact",
+   "fieldtype": "Phone",
+   "label": "Emergency Contact",
+   "reqd": 1
+  },
+  {
+   "default": "No",
+   "fieldname": "medical_history",
+   "fieldtype": "Select",
+   "label": "Medical history",
+   "options": "Yes\nNo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Select",
+   "label": "Blood group",
+   "options": "A+\nA-\nB+\nB-\nO+\nO-\nAB+\nAB-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "membership_plan",
+   "fieldtype": "Link",
+   "label": "Plan",
+   "options": "Membership Plan",
+   "reqd": 1
+  },
+  {
+   "default": "Unpaid",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment status",
+   "options": "Pending\nPaid\nUnpaid",
+   "read_only": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "membership_status",
+   "fieldtype": "Select",
+   "label": "Membership status",
+   "options": "Pending\nActive\nExpired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "membership_plan.plan_duration",
+   "fieldname": "membership_duration",
+   "fieldtype": "Data",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "personal_information_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Information "
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wuev",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "membership_details_section",
+   "fieldtype": "Section Break",
+   "label": "Membership Details"
+  },
+  {
+   "fieldname": "column_break_zjsq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payments_and_validity_section",
+   "fieldtype": "Section Break",
+   "label": "Payments and Validity"
+  },
+  {
+   "fieldname": "column_break_sall",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "membership_plan.plan_price",
+   "fetch_if_empty": 1,
+   "fieldname": "monthly_fee",
+   "fieldtype": "Currency",
+   "label": "Monthly Fee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount_paid",
+   "fieldtype": "Currency",
+   "label": "Amount paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Outstanding amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pay_now",
+   "fieldtype": "Button",
+   "label": "Pay now"
+  },
+  {
+   "fieldname": "total_fee",
+   "fieldtype": "Currency",
+   "label": "Total Fee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "account_number",
+   "fieldtype": "Link",
+   "label": "Account number",
+   "options": "Payment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount_to_pay_till_date",
+   "fieldtype": "Currency",
+   "label": "Amount to pay (Till date)",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.medical_history==\"Yes\"",
+   "fieldname": "describe_medical_history",
+   "fieldtype": "Small Text",
+   "label": "Describe your medical history"
+  },
+  {
+   "fieldname": "renew_plan",
+   "fieldtype": "Button",
+   "label": "Renew plan"
+  },
+  {
+   "fieldname": "membership_renewals_section",
+   "fieldtype": "Section Break",
+   "label": "Membership renewals"
+  },
+  {
+   "fieldname": "previous_plans",
+   "fieldtype": "Table",
+   "label": "Previous plans",
+   "options": "Previous plans"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-25 00:52:20.418946",
+ "modified_by": "Administrator",
+ "module": "The Unstoppable Gym",
+ "name": "Members",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "membership_plan",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "full_name"
+}
