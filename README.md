@@ -8,7 +8,7 @@ This Frappe application empowers gym owners to manage their business efficiently
 
 * **Seamless Member Management:** Effortlessly manage member enrollments, memberships, and contact information.
 * **Flexible Membership Plans:** Create and customize membership plans to cater to diverse needs and preferences.
-* **Automated Attendance Tracking:** Track member attendance with ease, gaining valuable insights into gym usage patterns.
+* **Attendance Tracking:** Track member attendance with ease, gaining valuable insights into gym usage patterns.
 * **Streamlined Operations:** Automate workflows to save time and reduce administrative overhead.
 * **[Optional Feature]** Add any additional features your app offers.
 
@@ -27,8 +27,8 @@ If you prefer to test the application without setting up a local frappe bench en
 
 If you prefer to test the application without setting up a local environment, you can use a codespace repository (Follow the link provided below).
 
-   **[Repository](https://github.com/ankush/frappe_codespace.git)**
-   This will open your bench environment in VSCode (Browser) where you can follow the below process.
+   **[Codespace Repository](https://github.com/ankush/frappe_codespace.git)**
+   - This will open your bench environment in VSCode (Browser) where you can follow the below process.
    
    - Create a site in the frappe bench enviornment using the `bench` command:
       ```
