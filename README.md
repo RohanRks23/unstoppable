@@ -15,7 +15,7 @@ This Frappe application empowers gym owners to manage their business efficiently
 ## Installation and setup
 
 **1. Set up your Frappe Bench:**
-If you prefer to test the application without setting up a local frappe bench environment (Follow the link provided below).
+If you prefer to test the application by setting up a local frappe bench environment (Follow the link provided below).
 
    - Follow the official Frappe Framework Installation guide: https://docs.frappe.io/framework/user/en/installation
    - Create a site in the frappe bench enviornment using the `bench` command:
