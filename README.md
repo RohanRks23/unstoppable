@@ -48,8 +48,14 @@ If you prefer to test the application without setting up a local environment, yo
 
 **3. Install the app in your site:**
 
-   - Create a new Frappe site: `bench new-site <site-name>`
-   - Install the app on your site: `bench --site <site-name> install-app unstoppable`
+   - Create a new Frappe site (if you havent already). Skip if you already have a site in your bench environment.
+```
+bench new-site <site-name>
+```
+   - Install the app on your site:
+```
+bench --site <site-name> install-app unstoppable
+```
 
 **4. Start your Frappe bench:**
 
