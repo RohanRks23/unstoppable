@@ -5,6 +5,29 @@ app_description = "Find your better self, challenge yourself, become Unstoppable
 app_email = "rohanksahukar@gmail.com"
 app_license = "mit"
 
+
+
+doc_events = {
+    "Members": {
+        "before_insert": "unstoppable.tasks.on_membership_creation",
+        "on_update": "unstoppable.tasks.on_membership_updates"
+	}
+}
+
+
+
+
+scheduler_events = {
+	"daily": [
+		"unstoppable.tasks.daily_reminder_task_user",
+        "unstoppable.tasks.daily_reminder_task_owners"
+	],
+	"weekly": [
+		"unstoppable.tasks.weekly_summary_task"
+	],
+}
+
+
 # Apps
 # ------------------
 
@@ -150,15 +173,6 @@ app_license = "mit"
 
 
 
-
-doc_events = {
-    "Members": {
-        "before_insert": "unstoppable.tasks.on_membership_creation",
-        "on_update": "unstoppable.tasks.on_membership_updates"
-	}
-}
-
-
 # Scheduled Tasks
 # ---------------
 
@@ -179,18 +193,6 @@ doc_events = {
 # 		"unstoppable.tasks.monthly"
 # 	],
 # }
-
-
-scheduler_events = {
-	"daily": [
-		"unstoppable.tasks.daily_reminder_task_user",
-        "unstoppable.tasks.daily_reminder_task_owners"
-	],
-	"weekly": [
-		"unstoppable.tasks.weekly_summary_task"
-	],
-}
-
 
 
 
