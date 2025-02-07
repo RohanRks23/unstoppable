@@ -101,7 +101,7 @@ Once confirmed, a new record is created in the **Members Doctype**, storing the 
 
 ### Membership Payment Process
 
-Video 3: Payment Setup and Status Updates
+[Payment Setup and Status Updates](https://github.com/user-attachments/assets/d68acd73-22b9-41a7-a1d2-b1ff793f8e6c)
 
 Upon accessing their new membership record, users can review their provided details. Initially, the membership and payment status remain **“Pending”** until payment details are provided.
 
@@ -115,7 +115,7 @@ This generates a new payment record in the **Payment Doctype**, tracking all tra
 
 The system automatically updates payment and membership statuses and calculates payment history details.
 
-Video 4: Clearing Outstanding Dues
+[Clearing Outstanding Dues](https://github.com/user-attachments/assets/321c2824-192d-4d34-80a3-c5b7fe4953a1)
 
 **To settle outstanding amounts:**
 
@@ -131,7 +131,7 @@ Users can navigate back to the **Members Doctype** via the **“Back to Members�
 
 ### Membership Renewal
 
-Video 5: Renewing Membership Plans
+[Renewing Membership Plans](https://github.com/user-attachments/assets/899ef6b1-ebcd-4bb4-b585-f407e38a3f00)
 
 If a user’s membership is nearing expiration or they wish to renew, they can do so by clicking the **“Renew”** button. This action:
 
@@ -143,7 +143,7 @@ Clears previous plan details, allowing selection of a new plan.
 
 ### Attendance Management
 
-Video 6: Tracking Member Attendance
+[Tracking Member Attendance](https://github.com/user-attachments/assets/1986f92c-0d8c-482b-bd60-5245979649ae)
 
 Gym coaches can efficiently track attendance by clicking on **Gym Attendance** shotcut in **Gym Dashboard Workspace** or by searching for the **Attendance List** in the **Awesome Bar**. They can create new attendance records by:
 
@@ -155,7 +155,7 @@ All supporting dashboards update automatically with new attendance data.
 
 ### Dashboard & Analytics
 
-Video 7: Simplified Dashboards for Gym Officials
+[Simplified Dashboards for Gym Officials](https://github.com/user-attachments/assets/203cce97-d092-4d27-8247-5caa21b34a03)
 
 Gym officials can monitor membership, payment, and attendance details using a streamlined **Dashboard Charts** available within **"The Unstoppable Gym" Workspace**. This ensures efficient tracking and management of all relevant data in a user-friendly interface.
 
