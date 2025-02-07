@@ -67,7 +67,7 @@ bench --site <site-name> install-app unstoppable
 
 ### For Gym Officials
 
-Video 1: Managing Membership Plans
+[Managing Membership Plans](https://github.com/user-attachments/assets/5808d38d-f676-413d-89e6-4335a91edbc2)
 
 Gym officials can easily access the **Membership Plan list** by clicking on **Membership Plans** shotcut in **Gym Dashboard Workspace** or by searching for it in the **Awesome Bar**. This will redirect them to the **Membership Plan Doctype List View**, where they can create multiple membership plans by defining their names, amenities, and pricing structures.
 
