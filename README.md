@@ -79,10 +79,11 @@ Additionally, they have the option to control the visibility of these plans—ei
 
 **Accessing Membership Plans**
 
-Users can visit the publicly accessible membership page via:
- - http://Domain/unstoppable or http://localhost:8000/unstoppable.
+Users can visit the publicly accessible membership page:
+ - by clicking on **Unstoppable Website for everyone** shotcut in **Gym Dashboard Workspace**.
+ - or via http://Domain/unstoppable or http://localhost:8000/unstoppable.
 
-Video 2: Membership Registration Process
+[Membership Registration Process](https://github.com/user-attachments/assets/eca4eab3-5fb4-47eb-81bd-cb0dbcd00042)
 
 A dedicated webpage has been created where users can explore available membership plans. Clicking the “**Register Now**” button redirects them to a web view of the **Membership Plans Doctype List View**.
 
