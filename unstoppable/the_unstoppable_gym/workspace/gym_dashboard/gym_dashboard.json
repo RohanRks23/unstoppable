@@ -1,0 +1,97 @@
+{
+ "app": "frappe",
+ "charts": [
+  {
+   "chart_name": "Total Active and Inactive members",
+   "label": "Total Active and Inactive members"
+  },
+  {
+   "chart_name": "Memberships expiring this month",
+   "label": "Memberships expiring this month"
+  },
+  {
+   "chart_name": "Weekly attendance summary",
+   "label": "Weekly attendance summary"
+  }
+ ],
+ "content": "[{\"id\":\"APkv3u5tOl\",\"type\":\"paragraph\",\"data\":{\"text\":\"WebView Links\",\"col\":12}},{\"id\":\"UyYmegK69c\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unstoppable Website for everyone\",\"col\":6}},{\"id\":\"DCcHX0YG-C\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Membership Plans (WebView)\",\"col\":6}},{\"id\":\"LqYarXC3A0\",\"type\":\"paragraph\",\"data\":{\"text\":\"Doctype's\",\"col\":12}},{\"id\":\"e0rcA8VgEB\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Membership Plans\",\"col\":3}},{\"id\":\"yehEokrO4x\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Members\",\"col\":3}},{\"id\":\"2TrtlxcScP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payments\",\"col\":3}},{\"id\":\"iTNo44P6J3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Attendance\",\"col\":3}},{\"id\":\"0GTGgOpT3G\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gym Dashboard</span>\",\"col\":12}},{\"id\":\"aS7Gu9oU0e\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total active members\",\"col\":12}},{\"id\":\"vbfX2H3Cbh\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Total Active and Inactive members\",\"col\":12}},{\"id\":\"2eZOB3CFVp\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Memberships expiring this month\",\"col\":12}},{\"id\":\"-s_uiRnJXu\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Weekly attendance summary\",\"col\":12}}]",
+ "creation": "2025-01-27 10:26:21.222983",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "color-energy-points",
+ "idx": 0,
+ "indicator_color": "darkgrey",
+ "is_hidden": 0,
+ "label": "Gym Dashboard",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2025-02-07 13:03:30.688142",
+ "modified_by": "Administrator",
+ "module": "The Unstoppable Gym",
+ "name": "Gym Dashboard",
+ "number_cards": [
+  {
+   "label": "Total active members",
+   "number_card_name": "Total active members"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 23.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Unstoppable Website for everyone",
+   "type": "URL",
+   "url": "http://172.24.144.253:8000/unstoppable"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "label": "Membership Plans",
+   "link_to": "Membership Plan",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Gym Membership Plans (WebView)",
+   "type": "URL",
+   "url": "http://172.24.144.253:8000/plans"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Gym Members",
+   "link_to": "Members",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Payments",
+   "link_to": "Payment",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "Gym Attendance",
+   "link_to": "Attendance",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Gym Dashboard",
+ "type": "Workspace"
+}

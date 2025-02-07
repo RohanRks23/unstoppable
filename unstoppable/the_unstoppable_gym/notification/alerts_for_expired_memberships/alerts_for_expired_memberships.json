@@ -1,6 +1,7 @@
 {
  "attach_print": 0,
  "channel": "Email",
+ "condition": "doc.membership_status==\"Expired\"",
  "creation": "2025-01-23 15:09:32.594777",
  "days_in_advance": 0,
  "docstatus": 0,
@@ -13,11 +14,12 @@
  "message": "Dear {{ doc.first_name }},\n    I hope this mail finds you well. We would like to inform you that your {{ doc.membership_plan }} is now {{doc.membership_status}}.",
  "message_type": "Plain Text",
  "minutes_offset": 0,
- "modified": "2025-01-23 15:15:12.313081",
+ "modified": "2025-02-06 12:20:00.118002",
  "modified_by": "Administrator",
  "module": "The Unstoppable Gym",
  "name": "Alerts for expired memberships",
  "owner": "Administrator",
+ "property_value": "",
  "recipients": [
   {
    "receiver_by_document_field": "owner",
@@ -28,6 +30,7 @@
  "send_to_all_assignees": 0,
  "sender": "Unstoppable",
  "sender_email": "rohanksahukar@gmail.com",
+ "set_property_after_alert": "",
  "subject": "Your {{ doc.membership_plan}} is now {{doc.membership_status}}",
  "value_changed": "membership_status"
 }

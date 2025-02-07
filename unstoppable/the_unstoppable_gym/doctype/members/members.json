@@ -203,8 +203,7 @@
    "fieldname": "account_number",
    "fieldtype": "Link",
    "label": "Account number",
-   "options": "Payment",
-   "reqd": 1
+   "options": "Payment"
   },
   {
    "fieldname": "amount_to_pay_till_date",
@@ -235,9 +234,8 @@
    "options": "Previous plans"
   }
  ],
- "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-25 00:52:20.418946",
+ "modified": "2025-02-03 16:37:33.829995",
  "modified_by": "Administrator",
  "module": "The Unstoppable Gym",
  "name": "Members",

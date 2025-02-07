@@ -97,34 +97,38 @@ function calculate_payments(frm) {
         let amount_till_date = totalMonths * frm.doc.monthly_fee;
         frm.set_value('amount_to_pay_till_date', amount_till_date);
 
-        // Fetch the total amount paid till date by the user
-        frappe.call({
-            method: "frappe.client.get_value",
-            args: {
-                doctype: "Payment",
-                filters: { name: frm.doc.account_number },
-                fieldname: "total_paid"
-            },
-            callback: function (response) {
-                if (response && response.message) {
-                    frm.set_value("amount_paid", response.message.total_paid);
-                } else {
-                    frm.set_value("amount_paid", 0.00);
-                }
+        if (frm.doc.account_number) {
+            // Fetch the total amount paid till date by the user
+            frappe.call({
+                method: "frappe.client.get_value",
+                args: {
+                    doctype: "Payment",
+                    filters: { name: frm.doc.account_number },
+                    fieldname: "total_paid"
+                },
+                callback: function (response) {
+                    if (response && response.message) {
+                        frm.set_value("amount_paid", response.message.total_paid);
+                    } else {
+                        frm.set_value("amount_paid", 0.00);
+                    }
 
-                // Calculate outstanding amount
-                let outstanding_amount = amount_till_date - frm.doc.amount_paid;
-                frm.set_value("outstanding_amount", outstanding_amount);
-
-                // Update payment status
-                if (outstanding_amount > 0){
-                    frm.set_value("payment_status", 'Unpaid');
+                    // Calculate outstanding amount
+                    let outstanding_amount = amount_till_date - frm.doc.amount_paid;
+                    frm.set_value("outstanding_amount", outstanding_amount);
+                    
+                    // Update payment status
+                    if (outstanding_amount > 0){
+                        frm.set_value("payment_status", 'Unpaid');
+                    }
+                    else{
+                        frm.set_value("payment_status", 'Paid');
+                    }
                 }
-                else{
-                    frm.set_value("payment_status", 'Paid');
-                }
-            }
-        });
+            });
+        }else{
+            frm.set_value("payment_status", 'Pending');
+        }
     }
 }
 
@@ -143,9 +147,13 @@ function membership_status(frm) {
             frm.set_value('membership_status', 'Expired');
             // frappe.msgprint('Expired');
         }
-        else{
+        else if(current_date_obj < end_date_obj) {
             frm.set_value('membership_status', 'Active');
             // frappe.msgprint('Active');
         }
+    }
+    if (!frm.doc.account_number) {
+        frm.set_value('membership_status', 'Pending');
+
     }
 }

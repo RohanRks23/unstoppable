@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "format:{plan_name}-{plan_duration}Months",
  "creation": "2025-01-20 15:32:04.851141",
@@ -9,7 +10,9 @@
   "plan_name",
   "plan_features",
   "plan_duration",
-  "plan_price"
+  "plan_price",
+  "route",
+  "is_published"
  ],
  "fields": [
   {
@@ -40,11 +43,24 @@
    "label": "Price",
    "non_negative": 1,
    "reqd": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published ?"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
  "links": [],
- "modified": "2025-01-20 17:15:30.839780",
+ "modified": "2025-02-06 14:49:33.465868",
  "modified_by": "Administrator",
  "module": "The Unstoppable Gym",
  "name": "Membership Plan",
@@ -64,6 +80,7 @@
    "write": 1
   }
  ],
+ "route": "plans",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],

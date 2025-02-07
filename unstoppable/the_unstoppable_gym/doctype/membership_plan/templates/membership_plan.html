@@ -1,0 +1,27 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>{{ title |e }} ({{ doc.plan_duration }} Months)</h1>
+<h5>{{ doc.plan_features.split('.')[0] }}</h5>
+<t2>{{ (doc.plan_features.split(':')[0]).split('.')[2] }}</t2><br>
+<div style="margin-left: 14px;">
+    <t2>• {{ doc.plan_features.split('.')[3] }}</t2><br>
+    <t2>• {{ doc.plan_features.split('.')[4] }}</t2><br>
+    <t2>• {{ doc.plan_features.split('.')[5] }}</t2><br>
+</div><br>
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    
+    <div style="display: flex; align-items: center; gap: 20px; font-size: 1.5rem; font-weight: bold;">
+        <span style="color: #535353;">Total: <span style="color: #525151;">₹ {{ doc.total_price }}</span></span>
+        <span style="color: #888;">(₹ {{ doc.plan_price }}/month)</span>
+    </div>
+    
+    <a class="btn btn-info" href="/gym-registration/new?membership_plan={{name}}" style="margin-top: 20px; margin-left: 5px; padding: 10px 25px; font-size: 1rem; color: #fff; background-color: #2c92ff; border: none; border-radius: 5px; cursor: pointer;">
+        Book Plan
+    </a>
+</div>
+{% endblock %}
+
+<!-- this is a sample default web page template -->
+

@@ -24,12 +24,15 @@ class Members(Document):
         end_date = datetime.strptime(self.end_date, "%Y-%m-%d")
         current_date = datetime.now()
 
-        # now compare end date and current date
-        if current_date >= end_date:
-            self.membership_status = 'Expired'
+        if self.account_number:
+            # now compare end date and current date
+            if current_date >= end_date:
+                self.membership_status = 'Expired'
+            else:
+                self.membership_status = 'Active'
         else:
-            self.membership_status = 'Active'
-            
+            self.membership_status = 'Pending'
+
     def validate(self):
         self.payments()
         
@@ -60,27 +63,31 @@ class Members(Document):
         
         self.amount_to_pay_till_date = months * self.monthly_fee
 
-        #write code to get the total amount paid till date by the user
-        # self.amount_paid
-        total_paid = frappe.db.get_value(
-            doctype="Payment", 
-            filters={"name": self.account_number}, 
-            fieldname="total_paid"
-            )
-        if total_paid:
-            self.amount_paid = total_paid
+        if self.account_number:
+            #write code to get the total amount paid till date by the user
+            # self.amount_paid
+            total_paid = frappe.db.get_value(
+                doctype="Payment", 
+                filters={"name": self.account_number}, 
+                fieldname="total_paid"
+                )
+            if total_paid:
+                self.amount_paid = total_paid
+            else:
+                self.amount_paid = 0.00
         else:
             self.amount_paid = 0.00
-
         #The total outstanding amount the user have to pay till date to clear his dues
         self.outstanding_amount = self.amount_to_pay_till_date - self.amount_paid
 
-        # Updateing payment status based on the outstanding amount
-        if self.outstanding_amount:
-            self.payment_status='Unpaid'
+        if self.account_number:
+            # Updateing payment status based on the outstanding amount
+            if self.outstanding_amount:
+                self.payment_status='Unpaid'
+            else:
+                self.payment_status='Paid'
         else:
-            self.payment_status='Paid'
-    
+            self.payment_status='Pending'
 
 
 

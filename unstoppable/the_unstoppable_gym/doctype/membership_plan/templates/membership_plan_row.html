@@ -1,0 +1,41 @@
+<!-- <div>
+	<a href="/{{ doc.route |e }}">{{ (doc.title or doc.name) |e }}</a>
+</div> -->
+<!-- this is a sample default list template -->
+
+
+<div style="
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    border-left-width: 50%;
+    border-right-width: 50%;
+    max-width: 1450px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+">
+    
+	<div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="font-weight: bold; font-size: 18px; color: #333;">
+            {{ doc.plan_name }}
+        </div>
+        <div style="text-align: right; font-size: 1.5rem; font-weight: bold;">
+            ₹ {{ doc.plan_price }}/month
+        </div>
+    </div>
+    <div style="color: #666; margin: 8px 0;">
+        Duration:	{{ doc.plan_duration }} Months
+    </div>
+    <div style="color: #999; margin-bottom: 8px;">
+		{{ doc.plan_features.split('.')[0] }} 
+    </div>
+    
+    <a href="/{{ doc.route }}" style="
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+    ">
+        View Plan
+    </a>
+</div>
